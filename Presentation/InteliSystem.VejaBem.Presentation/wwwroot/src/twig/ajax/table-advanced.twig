@@ -1,0 +1,13 @@
+      {% include '../content/_table-advanced.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}datatables/dataTables.bootstrap4.min.css',
+    '{{ folder.plugins }}datatables/responsive.bootstrap4.min.css',
+    '{{ folder.plugins }}datatables/jquery.dataTables.bootstrap4.responsive.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_table-advanced.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

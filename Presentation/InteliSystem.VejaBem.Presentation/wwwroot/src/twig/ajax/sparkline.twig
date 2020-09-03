@@ -1,0 +1,11 @@
+      {% include '../content/_sparkline.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}jquery-sparkline/jquery.sparkline.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_sparkline.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

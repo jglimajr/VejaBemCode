@@ -1,0 +1,8 @@
+      {% include '../content/_tooltips.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_tooltips.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

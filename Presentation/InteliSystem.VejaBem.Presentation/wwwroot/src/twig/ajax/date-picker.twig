@@ -1,0 +1,16 @@
+      {% include '../content/_date-picker.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}flatpickr/flatpickr.min.css',
+    '{{ folder.plugins }}flatpickr/plugins/monthSelect/style.css',
+    '{{ folder.plugins }}clockpicker/bootstrap-clockpicker.min.css',
+    '{{ folder.plugins }}flatpickr/flatpickr.min.js',
+    '{{ folder.plugins }}flatpickr/plugins/monthSelect/index.js',
+    '{{ folder.plugins }}clockpicker/bootstrap-clockpicker.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_date-picker.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

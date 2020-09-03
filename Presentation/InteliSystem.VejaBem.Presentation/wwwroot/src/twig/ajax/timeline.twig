@@ -1,0 +1,8 @@
+      {% include '../content/_timeline.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_timeline.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

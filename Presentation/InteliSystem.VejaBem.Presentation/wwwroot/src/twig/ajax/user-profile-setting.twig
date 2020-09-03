@@ -1,0 +1,11 @@
+      {% include '../content/_user-profile-setting.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}autosize/autosize.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_user-profile-setting.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

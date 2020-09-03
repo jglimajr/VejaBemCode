@@ -1,0 +1,11 @@
+      {% include '../content/_tag-input.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}tagin/tagin.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_tag-input.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

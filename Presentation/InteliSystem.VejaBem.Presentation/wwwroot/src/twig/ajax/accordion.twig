@@ -1,0 +1,8 @@
+      {% include '../content/_accordion.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_accordion.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

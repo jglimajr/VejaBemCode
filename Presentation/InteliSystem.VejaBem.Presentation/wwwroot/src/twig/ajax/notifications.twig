@@ -1,0 +1,12 @@
+      {% include '../content/_notifications.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}noty/noty.min.css',
+    '{{ folder.plugins }}noty/noty.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_notifications.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

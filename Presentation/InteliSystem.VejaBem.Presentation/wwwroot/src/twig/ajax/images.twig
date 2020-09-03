@@ -1,0 +1,14 @@
+      {% include '../content/_images.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}photoswipe/photoswipe.min.css',
+    '{{ folder.plugins }}photoswipe/photoswipe-default-skin/default-skin.min.css',
+    '{{ folder.plugins }}photoswipe/photoswipe.min.js',
+    '{{ folder.plugins }}photoswipe/photoswipe-ui-default.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_images.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

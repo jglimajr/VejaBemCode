@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'forms',
+    'sub': 'tag-input'
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../include/_header.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Tag Input</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_tag-input.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}tagin/tagin.min.js"></script>
+  <script>
+    $(() => {
+      {% include '../content/_tag-input.js' %}
+    })
+  </script>
+
+</body>
+
+</html>

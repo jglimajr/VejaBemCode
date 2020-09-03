@@ -1,0 +1,12 @@
+      {% include '../content/_index.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}chart.js/Chart.min.js',
+    '{{ folder.plugins }}jquery-sparkline/jquery.sparkline.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_index.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

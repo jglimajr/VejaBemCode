@@ -1,0 +1,13 @@
+      {% include '../content/_form-wizard.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}smartwizard/css/smart_wizard.min.css',
+    '{{ folder.plugins }}smartwizard/css/smart_wizard_arrows.min.css',
+    '{{ folder.plugins }}smartwizard/js/jquery.smartWizard.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_form-wizard.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <link rel="stylesheet" href="{{ folder.plugins }}flatpickr/flatpickr.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}flatpickr/plugins/monthSelect/style.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}clockpicker/bootstrap-clockpicker.min.css">
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'forms',
+    'sub': 'date-picker'
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'forms',
+      'sub': 'date-picker'
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Date Picker</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_date-picker.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}flatpickr/flatpickr.min.js"></script>
+  <script src="{{ folder.plugins }}flatpickr/plugins/monthSelect/index.js"></script>
+  <script src="{{ folder.plugins }}clockpicker/bootstrap-clockpicker.min.js"></script>
+  <script>
+    $(() => {
+      {% include '../content/_date-picker.js' %}
+    })
+  </script>
+
+</body>
+
+</html>

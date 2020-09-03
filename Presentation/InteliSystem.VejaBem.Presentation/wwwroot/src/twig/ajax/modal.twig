@@ -1,0 +1,11 @@
+      {% include '../content/_modal.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}bootbox/bootbox.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_modal.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

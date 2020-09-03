@@ -1,0 +1,116 @@
+<h5>Line Chart</h5>
+      <p class="text-secondary font-size-sm">
+        A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.
+      </p>
+
+      <div class="row row-cols-1 row-cols-md-2 gutters-sm">
+
+        <!-- BASIC -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Basic
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-basic"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /BASIC -->
+
+        <!-- STRAIGHTLINES -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Straight Lines
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-straightlines"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /STRAIGHTLINES -->
+
+        <!-- MULTI AXIS -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Multi Axis
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-multi"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /MULTI AXIS -->
+
+        <!-- FILL AREA -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Fill Area
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-fill"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /FILL AREA -->
+
+        <!-- DASH LINES -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Dash Lines
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-dash"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /DASH LINES -->
+
+        <!-- POINT STYLES -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Point Style:
+              <select class="custom-select custom-select-sm w-auto ml-3" id="pointStyle">
+                <option value="circle">circle</option>
+                <option value="cross">cross</option>
+                <option value="crossRot">crossRot</option>
+                <option value="dash">dash</option>
+                <option value="line">line</option>
+                <option value="rect">rect</option>
+                <option value="rectRounded">rectRounded</option>
+                <option value="rectRot">rectRot</option>
+                <option value="star">star</option>
+                <option value="triangle">triangle</option>
+              </select>
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="line-chart-point-style"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /POINT STYLES -->
+
+      </div>

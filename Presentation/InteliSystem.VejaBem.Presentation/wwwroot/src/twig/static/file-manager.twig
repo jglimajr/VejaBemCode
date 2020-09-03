@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'file-manager',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../include/_header.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body p-0">
+
+      {% include '../content/_file-manager.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <!-- JS plugins goes here -->
+  <script>
+    {% include '../content/_file-manager.js' %}
+  </script>
+
+</body>
+
+</html>

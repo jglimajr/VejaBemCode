@@ -1,0 +1,17 @@
+      <style>
+        .main-body {
+          padding: 0;
+        }
+      </style>
+
+      {% include '../content/_chat.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}autosize/autosize.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_chat.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

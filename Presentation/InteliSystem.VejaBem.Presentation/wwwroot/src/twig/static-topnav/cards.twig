@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  {% include '../include/_main-css.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  <title>{{ title }}</title>
+  <style>
+    .card-example {
+      max-width: 400px;
+    }
+  </style>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'ui',
+    'sub': 'cards'
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'ui',
+      'sub': 'cards'
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">UI Elements</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cards</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_cards.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <!-- JS plugins goes here -->
+  <script>
+    {% include '../content/_cards.js' %}
+  </script>
+
+</body>
+
+</html>

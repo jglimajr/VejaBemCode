@@ -1,0 +1,43 @@
+@page "/"
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-lg-7 col-xl-8 d-none d-lg-block">
+			<img src="img/auth.svg" alt="" class="img-fluid w-100">
+		</div>
+		<div class="col-lg-5 col-xl-4 d-flex justify-content-center align-items-start">
+			<div class="card mb-3">
+				<div class="card-body p-4">
+					<h3>Log In</h3>
+					<p class="font-weight-light text-secondary">Olá! Favor informar seu <strong>Usuário</strong> e <strong>Senha</strong> para Acessar seu Serviço</p>
+					<hr>
+					<EditForm OnValidSubmit="EfetuarLogin">
+						<div class="form-group">
+							<label class="font-size-sm" for="username">Usuário</label>
+							<InputText type="text" class="form-control bg-gray-200 border-gray-200" value=@username name="username" id="username" placeholder="FulanoDeTal" autocomplete="off" />
+						</div>
+						<div class="form-group">
+							<label class="font-size-sm" for="password">Senha</label>
+							<InputText type="password" class="form-control bg-gray-200 border-gray-200" value=@password name="password"  id="password" placeholder="Sua Senha !" />
+						</div>
+						<button type="submit" class="btn btn-primary btn-block">Acessar</button>
+						<div class="small mt-4">
+							Ainda não possui Cadastro?
+							<a href="" class="text-decoration-underline">Faça seu Registro Agora!!</a>
+						</div>
+					</EditForm>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@code{
+    private string username = "jglimajr";
+    private string password = "Biel@2008";
+
+	private void EfetuarLogin()
+	{
+
+	}
+}

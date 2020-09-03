@@ -1,0 +1,17 @@
+  <style>
+    .slider-example {
+      max-width: 300px;
+    }
+  </style>
+      {% include '../content/_range-slider.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}nouislider/nouislider.min.css',
+    '{{ folder.plugins }}nouislider/nouislider.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_range-slider.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

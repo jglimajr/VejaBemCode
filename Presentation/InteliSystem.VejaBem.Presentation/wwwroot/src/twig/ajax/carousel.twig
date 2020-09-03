@@ -1,0 +1,12 @@
+      {% include '../content/_carousel.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}swiper/swiper.min.css',
+    '{{ folder.plugins }}swiper/swiper.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_carousel.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

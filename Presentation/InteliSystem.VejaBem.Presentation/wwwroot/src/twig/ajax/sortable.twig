@@ -1,0 +1,11 @@
+      {% include '../content/_sortable.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}sortablejs/Sortable.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_sortable.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

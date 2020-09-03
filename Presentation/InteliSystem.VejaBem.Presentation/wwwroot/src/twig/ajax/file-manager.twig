@@ -1,0 +1,14 @@
+      <style>
+        .main-body {
+          padding: 0;
+        }
+      </style>
+
+      {% include '../content/_file-manager.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_file-manager.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

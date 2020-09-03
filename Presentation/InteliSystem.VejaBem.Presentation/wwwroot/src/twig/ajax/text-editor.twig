@@ -1,0 +1,12 @@
+      {% include '../content/_text-editor.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}summernote/summernote-bs4.css',
+    '{{ folder.plugins }}summernote/summernote-bs4.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_text-editor.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

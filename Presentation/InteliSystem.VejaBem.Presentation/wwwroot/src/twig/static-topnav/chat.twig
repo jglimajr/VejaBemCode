@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'chat',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'chat',
+      'sub': ''
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body p-0">
+
+      {% include '../content/_chat.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}autosize/autosize.min.js"></script>
+  <script>
+    {% include '../content/_chat.js' %}
+  </script>
+
+</body>
+
+</html>

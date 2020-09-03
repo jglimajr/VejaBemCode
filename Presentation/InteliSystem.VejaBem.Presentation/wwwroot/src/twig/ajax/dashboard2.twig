@@ -1,0 +1,15 @@
+      {% include '../content/_index2.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}chart.js/Chart.min.js',
+    '{{ folder.plugins }}jquery-sparkline/jquery.sparkline.min.js',
+    '{{ folder.plugins }}jqvmap/jqvmap.min.css',
+    '{{ folder.plugins }}jqvmap/jquery.vmap.min.js',
+    '{{ folder.plugins }}jqvmap/maps/jquery.vmap.usa.js',
+  ]
+  App.loadPlugins(plugins, null, true).then(() => {
+    {% include '../content/_index2.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

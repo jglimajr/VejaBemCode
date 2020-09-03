@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'charts',
+    'sub': 'chart-doughnutpie'
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'charts',
+      'sub': 'chart-doughnutpie'
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Charts</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Doughnut and Pie</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_chart-doughnutpie.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}chart.js/Chart.min.js"></script>
+  <script>
+    {% include '../content/_chart-doughnutpie.js' %}
+  </script>
+
+</body>
+
+</html>

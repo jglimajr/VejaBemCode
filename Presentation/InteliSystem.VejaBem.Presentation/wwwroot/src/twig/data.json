@@ -1,0 +1,647 @@
+{
+  "title": "Mimity Admin",
+  "folder": {
+    "plugins": "../../../plugins/",
+    "font": "../../../font/",
+    "img": "../../../dist/img/"
+  },
+  "menus": [
+    {
+      "label": "DASHBOARD",
+      "title": "Website Analytics",
+      "menu": "home",
+      "icon": "<i data-feather=\"globe\"></i>",
+      "href": "index",
+      "breadcrumb": false
+    },
+    {
+      "title": "Sales Monitoring",
+      "menu": "home2",
+      "icon": "<i data-feather=\"shopping-bag\"></i>",
+      "href": "index2",
+      "breadcrumb": false
+    },
+    {
+      "label": "APPLICATION",
+      "title": "Mail",
+      "menu": "mail",
+      "icon": "<i class=\"material-icons\">mail_outline</i>",
+      "href": "mail",
+      "badge": "<span class=\"badge badge-warning ml-auto badge-pill\">3</span>",
+      "badgetopnav": "<span class=\"badge badge-warning ml-2 badge-pill\">3</span>",
+      "breadcrumb": false
+    },
+    {
+      "title": "File Manager",
+      "menu": "file-manager",
+      "icon": "<i class=\"material-icons\">folder_open</i>",
+      "href": "file-manager",
+      "breadcrumb": false
+    },
+    {
+      "title": "Chat",
+      "menu": "chat",
+      "icon": "<i data-feather=\"message-square\"></i>",
+      "href": "chat",
+      "breadcrumb": false
+    },
+    {
+      "title": "Calendar",
+      "menu": "calendar",
+      "icon": "<i data-feather=\"calendar\"></i>",
+      "href": "calendar"
+    },
+    {
+      "title": "Todo List",
+      "menu": "todo-list",
+      "icon": "<i data-feather=\"check-square\"></i>",
+      "href": "todo-list",
+      "breadcrumb": false
+    },
+    {
+      "title": "Images",
+      "menu": "images",
+      "icon": "<i data-feather=\"image\"></i>",
+      "href": "images"
+    },
+    {
+      "title": "Pricing",
+      "menu": "pricing",
+      "icon": "<i class=\"material-icons\">list_alt</i>",
+      "href": "pricing"
+    },
+    {
+      "title": "Timeline",
+      "menu": "timeline",
+      "icon": "<i data-feather=\"clock\"></i>",
+      "href": "timeline"
+    },
+    {
+      "title": "Invoice",
+      "menu": "invoice",
+      "icon": "<i class=\"fa fa-file-invoice-dollar\"></i>",
+      "href": "invoice"
+    },
+    {
+      "title": "Forum",
+      "menu": "forum",
+      "icon": "<i class=\"far fa-comments\"></i>",
+      "href": "forum",
+      "breadcrumb": false
+    },
+    {
+      "title": "Authentication",
+      "menu": "authentication",
+      "icon": "<i data-feather=\"lock\"></i>",
+      "subs": [
+        {
+          "title": "Login v1",
+          "href": "login",
+          "static": true
+        },
+        {
+          "title": "Login v2",
+          "href": "login2",
+          "static": true
+        },
+        {
+          "title": "Register",
+          "href": "register",
+          "static": true
+        },
+        {
+          "title": "Forgot Password",
+          "href": "forgot-password",
+          "static": true
+        }
+      ]
+    },
+    {
+      "label": "UI DESIGN",
+      "title": "Charts",
+      "menu": "charts",
+      "icon": "<i data-feather=\"pie-chart\"></i>",
+      "subs": [
+        {
+          "title": "Line Charts",
+          "sub": "chart-line",
+          "href": "chart-line"
+        },
+        {
+          "title": "Bar Charts",
+          "sub": "chart-bar",
+          "href": "chart-bar"
+        },
+        {
+          "title": "Radar Charts",
+          "sub": "chart-radar",
+          "href": "chart-radar"
+        },
+        {
+          "title": "Doughnut and Pie",
+          "sub": "chart-doughnutpie",
+          "href": "chart-doughnutpie"
+        },
+        {
+          "title": "Sparkline",
+          "sub": "sparkline",
+          "href": "sparkline"
+        }
+      ]
+    },
+    {
+      "title": "UI Elements",
+      "menu": "ui",
+      "icon": "<i data-feather=\"box\"></i>",
+      "subs": [
+        {
+          "title": "Accordion",
+          "sub": "accordion",
+          "href": "accordion"
+        },
+        {
+          "title": "Alerts",
+          "sub": "alerts",
+          "href": "alerts"
+        },
+        {
+          "title": "Badge",
+          "sub": "badge",
+          "href": "badge"
+        },
+        {
+          "title": "Breadcrumb",
+          "sub": "breadcrumb",
+          "href": "breadcrumb"
+        },
+        {
+          "title": "Buttons",
+          "sub": "buttons",
+          "href": "buttons"
+        },
+        {
+          "title": "Cards",
+          "sub": "cards",
+          "href": "cards"
+        },
+        {
+          "title": "Carousel",
+          "sub": "carousel",
+          "href": "carousel"
+        },
+        {
+          "title": "Collapse",
+          "sub": "collapse",
+          "href": "collapse"
+        },
+        {
+          "title": "Dropdowns",
+          "sub": "dropdowns",
+          "href": "dropdowns"
+        },
+        {
+          "title": "Icons",
+          "sub": "icons",
+          "href": "icons"
+        },
+        {
+          "title": "List Group",
+          "sub": "lists",
+          "href": "lists"
+        },
+        {
+          "title": "Media Object",
+          "sub": "media-object",
+          "href": "media-object"
+        },
+        {
+          "title": "Modal",
+          "sub": "modal",
+          "href": "modal"
+        },
+        {
+          "title": "Navigation",
+          "sub": "navigation",
+          "href": "navigation"
+        },
+        {
+          "title": "Notifications",
+          "sub": "notifications",
+          "href": "notifications"
+        },
+        {
+          "title": "Pagination",
+          "sub": "pagination",
+          "href": "pagination"
+        },
+        {
+          "title": "Popovers",
+          "sub": "popovers",
+          "href": "popovers"
+        },
+        {
+          "title": "Progress Bars",
+          "sub": "progress",
+          "href": "progress"
+        },
+        {
+          "title": "Sortable List",
+          "sub": "sortable",
+          "href": "sortable"
+        },
+        {
+          "title": "Spinners",
+          "sub": "spinners",
+          "href": "spinners"
+        },
+        {
+          "title": "Tooltips",
+          "sub": "tooltips",
+          "href": "tooltips"
+        },
+        {
+          "title": "Typography",
+          "sub": "typography",
+          "href": "typography"
+        }
+      ]
+    },
+    {
+      "title": "Tables",
+      "menu": "tables",
+      "icon": "<i class=\"material-icons\">table_chart</i>",
+      "subs": [
+        {
+          "title": "Table Basic",
+          "sub": "table-basic",
+          "href": "table-basic"
+        },
+        {
+          "title": "Table Advanced",
+          "sub": "table-advanced",
+          "href": "table-advanced"
+        }
+      ]
+    },
+    {
+      "title": "Forms",
+      "menu": "forms",
+      "icon": "<i class=\"material-icons\">notes</i>",
+      "subs": [
+        {
+          "title": "Form Elements",
+          "sub": "form-elements",
+          "href": "form-elements"
+        },
+        {
+          "title": "Input Group",
+          "sub": "input-group",
+          "href": "input-group"
+        },
+        {
+          "title": "Input Masks",
+          "sub": "input-masks",
+          "href": "input-masks"
+        },
+        {
+          "title": "Date Picker",
+          "sub": "date-picker",
+          "href": "date-picker"
+        },
+        {
+          "title": "Color Picker",
+          "sub": "color-picker",
+          "href": "color-picker"
+        },
+        {
+          "title": "Bootstrap Select",
+          "sub": "bootstrap-select",
+          "href": "bootstrap-select"
+        },
+        {
+          "title": "Bootstrap TouchSpin",
+          "sub": "bootstrap-touchspin",
+          "href": "bootstrap-touchspin"
+        },
+        {
+          "title": "Range Slider",
+          "sub": "range-slider",
+          "href": "range-slider"
+        },
+        {
+          "title": "Text Editor",
+          "sub": "text-editor",
+          "href": "text-editor"
+        },
+        {
+          "title": "Markdown Parser",
+          "sub": "markdown-parser",
+          "href": "markdown-parser"
+        },
+        {
+          "title": "Select2",
+          "sub": "select2",
+          "href": "select2"
+        },
+        {
+          "title": "Tag Input",
+          "sub": "tag-input",
+          "href": "tag-input"
+        },
+        {
+          "title": "Form Layouts",
+          "sub": "form-layouts",
+          "href": "form-layouts"
+        },
+        {
+          "title": "Form Validation",
+          "sub": "form-validation",
+          "href": "form-validation"
+        },
+        {
+          "title": "Form Wizard",
+          "sub": "form-wizard",
+          "href": "form-wizard"
+        }
+      ]
+    },
+    {
+      "title": "User",
+      "menu": "user",
+      "icon": "<i data-feather=\"users\"></i>",
+      "subs": [
+        {
+          "title": "User Profile",
+          "sub": "user-profile",
+          "href": "user-profile"
+        },
+        {
+          "title": "User List",
+          "sub": "user-list",
+          "href": "user-list"
+        },
+        {
+          "title": "User Grid",
+          "sub": "user-grid",
+          "href": "user-grid"
+        },
+        {
+          "title": "Profile Settings",
+          "sub": "user-profile-setting",
+          "href": "user-profile-setting"
+        }
+      ]
+    },
+    {
+      "title": "Error Pages",
+      "icon": "<i class=\"material-icons\">error_outline</i>",
+      "subs": [
+        {
+          "title": "Page Not Found",
+          "href": "error-404",
+          "static": true
+        },
+        {
+          "title": "Internal Server Error",
+          "href": "error-500",
+          "static": true
+        },
+        {
+          "title": "Service Unavailable",
+          "href": "error-503",
+          "static": true
+        },
+        {
+          "title": "Forbidden Access",
+          "href": "error-505",
+          "static": true
+        }
+      ]
+    }
+  ],
+  "todos": [
+    {
+      "title": "Carry Out Risk Assessment",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 08 2019"
+    },
+    {
+      "title": "Assignment of Tasks",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 07 2019"
+    },
+    {
+      "title": "Create Project Schedule and Milestones",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 06 2019",
+      "important": true
+    },
+    {
+      "title": "Determine Deliverables",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 05 2019"
+    },
+    {
+      "title": "Set Goals and Objectives",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 04 2019",
+      "important": true
+    },
+    {
+      "title": "Define Project Scope",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 03 2019"
+    },
+    {
+      "title": "Identify and Meet Stakeholders for Approval",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 02 2019",
+      "done": true
+    },
+    {
+      "title": "Create and Analyze Business Case",
+      "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minus autem impedit odit aspernatur perspiciatis.",
+      "time": "Aug, 01 2019",
+      "done": true,
+      "important": true
+    }
+  ],
+  "threads": [
+    {
+      "title": "Realtime fetching data",
+      "img": "user1.svg",
+      "repliedby": "drewdan",
+      "lastreplied": "13 minutes ago",
+      "views": 19,
+      "replies": 3
+    },
+    {
+      "title": "Laravel 7 database backup",
+      "img": "user2.svg",
+      "repliedby": "jlrdw",
+      "lastreplied": "3 hours ago",
+      "views": 18,
+      "replies": 1
+    },
+    {
+      "title": "Http client post raw content",
+      "img": "user3.svg",
+      "repliedby": "ciungulete",
+      "lastreplied": "7 hours ago",
+      "views": 32,
+      "replies": 2
+    },
+    {
+      "title": "Top rated filter not working",
+      "img": "user4.svg",
+      "repliedby": "bugsysha",
+      "lastreplied": "11 hours ago",
+      "views": 49,
+      "replies": 9
+    },
+    {
+      "title": "Create a delimiter field",
+      "img": "user5.svg",
+      "repliedby": "jackalds",
+      "lastreplied": "12 hours ago",
+      "views": 65,
+      "replies": 10
+    },
+    {
+      "title": "One model 4 tables",
+      "img": "user.svg",
+      "repliedby": "bugsysha",
+      "lastreplied": "14 hours ago",
+      "views": 45,
+      "replies": 4
+    },
+    {
+      "title": "Auth attempt returns false",
+      "img": "user1.svg",
+      "repliedby": "michaeloravec",
+      "lastreplied": "18 hours ago",
+      "views": 70,
+      "replies": 3
+    }
+  ],
+  "inbox": [
+    {
+      "id": 1,
+      "from": "support@wrapbootstrap.com",
+      "subject": "You sold an item!",
+      "summary": "Hello omadmin, Congratulations! You sold a Single License for Mimity. Item: Mimity - Admin Dashboard + Retail Template",
+      "date": "4:20 AM",
+      "unread": true,
+      "badge": "New",
+      "badge_color": "danger"
+    },
+    {
+      "id": 2,
+      "from": "notifications",
+      "subject": "New comment: Mimity - Admin Dashboard Template",
+      "summary": "Someone commented on your item, Mimity - Admin Dashboard + Retail Template",
+      "date": "Sep 24",
+      "unread": true,
+      "starred": true
+    },
+    {
+      "id": 3,
+      "from": "service@intl.paypal.",
+      "subject": "We're transferring money to your bank",
+      "summary": "We're transferring money from PayPal to your bank. You asked us to transfer",
+      "date": "Sep 16",
+      "starred": true
+    },
+    {
+      "id": 4,
+      "from": "Steam Support",
+      "subject": "Thank you for activating your product on Steam!",
+      "summary": "Your activation of DiRT Rally was successful. It is recommended that you",
+      "date": "Aug 31",
+      "attach": true
+    },
+    {
+      "id": 5,
+      "from": "Facebook",
+      "subject": "Did you log into Facebook from somewhere new?",
+      "summary": "It looks like someone tried to log into your account on August 13 at",
+      "date": "Aug 13",
+      "starred": true,
+      "unread": true,
+      "badge": "Social",
+      "badge_color": "info"
+    },
+    {
+      "id": 6,
+      "from": "Pinterest",
+      "subject": "Discover new ideas from your Pin twin",
+      "summary": "You and Wenjia are both interested in dashboard design! Check out some ideas",
+      "date": "Aug 11"
+    },
+    {
+      "id": 7,
+      "from": "Pixabay",
+      "subject": "Free Add-Ons for Photoshop and MS Office",
+      "summary": "These plugins let you search and insert Pixabay images directly from within",
+      "date": "Jul 31",
+      "badge": "Promotion",
+      "badge_color": "success"
+    },
+    {
+      "id": 8,
+      "from": "Caleb Porzio",
+      "subject": "Learn VS Code #7: Make Your .env Files Pretty",
+      "summary": "Hey friends, Here's a quick update on the book/course/thing before we talk",
+      "date": "Jul 14"
+    },
+    {
+      "id": 9,
+      "from": "Adam Wathan",
+      "subject": "Tailwind UI: What you've missed so far",
+      "summary": "Hey, thanks again for talking an interest in Tailwind UI! So far you've missed five",
+      "date": "Jun 18"
+    },
+    {
+      "id": 10,
+      "from": "Dribbble",
+      "subject": "Dashboard obsessional",
+      "summary": "This week UX/UI designer Zinat Farahani joins us to share her favorite dashboard designs",
+      "date": "May 10"
+    },
+    {
+      "id": 11,
+      "from": "noreply@remove.bg",
+      "subject": "Activate your remove.bg account",
+      "summary": "remove.bg Activate your Account Thanks for signing up at remove.bg! To confirm your account",
+      "date": "May 02"
+    },
+    {
+      "id": 12,
+      "from": "Ubisoft Account Support",
+      "subject": "Welcome to Ubisoft",
+      "summary": "Hi, Welcome to Ubisoft. For your account security please verify your email address",
+      "date": "May 01"
+    },
+    {
+      "id": 13,
+      "from": "James Simmons",
+      "subject": "Feedback about licenses and support policy",
+      "summary": "Hello omadmin, You reveiced this email because you are a seller on Wrapbootstrap",
+      "date": "Apr 27"
+    },
+    {
+      "id": 14,
+      "from": "Google+ Team",
+      "subject": "Your personal Google+ account is going away on April 2, 2019",
+      "summary": "You've received this email because you have a consumer (personal) Google+ account or you manage a Google+ page",
+      "date": "Apr 01"
+    },
+    {
+      "id": 15,
+      "from": "Nate Murray",
+      "subject": "Fullstack Vue: 30 Days of Vue PDF Inside",
+      "summary": "Download 30 Days of Vue PDF and Code Here's your 30 Days of Vue PDF",
+      "date": "Mar 29"
+    }
+  ]
+}

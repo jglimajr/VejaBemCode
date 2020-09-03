@@ -1,0 +1,12 @@
+      {% include '../content/_color-picker.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}bootstrap-colorpicker/bootstrap-colorpicker.min.css',
+    '{{ folder.plugins }}bootstrap-colorpicker/bootstrap-colorpicker.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_color-picker.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

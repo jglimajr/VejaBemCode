@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'home',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../include/_header.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      {% include '../content/_index.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="../{{ folder.plugins }}chart.js/Chart.min.js"></script>
+  <script src="../{{ folder.plugins }}jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script>
+    {% include '../content/_index.js' %}
+  </script>
+
+</body>
+
+</html>

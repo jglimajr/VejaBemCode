@@ -1,0 +1,17 @@
+      <style>
+        .main-body {
+          padding: 0;
+        }
+      </style>
+
+      {% include '../content/_todo-list.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}autosize/autosize.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_todo-list.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

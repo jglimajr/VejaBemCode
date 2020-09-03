@@ -1,0 +1,18 @@
+﻿@inherits LayoutComponentBase
+
+<div class="sidebar">
+    <div class="sidebar-header">
+        <SideBarHeader />
+    </div>
+    <div class="sidebar-body">
+        <MenuItens />
+    </div>
+</div>
+<div class="main">
+    <MainHeader />
+    <div class="main-body">
+        <CardPage />
+        @Body
+    </div>
+</div>
+<SearchModal />

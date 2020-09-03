@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <link rel="stylesheet" href="{{ folder.plugins }}bootstrap-select/bootstrap-select.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}select2/css/select2.min.css">
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'forms',
+    'sub': 'form-validation'
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../include/_header.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_form-validation.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="{{ folder.plugins }}summernote/summernote-bs4.min.js"></script>
+  <script src="{{ folder.plugins }}select2/js/select2.min.js"></script>
+  <script src="{{ folder.plugins }}tagin/tagin.min.js"></script>
+  <script>
+    $(() => {
+      {% include '../content/_form-validation.js' %}
+    })
+  </script>
+
+</body>
+
+</html>

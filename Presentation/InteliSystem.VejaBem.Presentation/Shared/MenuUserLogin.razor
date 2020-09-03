@@ -1,0 +1,17 @@
+<a class="nav-link nav-link-faded rounded nav-link-img dropdown-toggle px-2" href="#" data-toggle="dropdown" data-display="static">
+	<img src="img/user.svg" alt="Admin" class="rounded-circle mr-2">
+	<span class="d-none d-sm-block">Admin</span>
+</a>
+<div class="dropdown-menu dropdown-menu-right pt-0 overflow-hidden">
+	<div class="media align-items-center bg-primary text-white px-4 py-3 mb-2">
+		<img src="img/user.svg" alt="Admin" class="rounded-circle" width="50" height="50">
+		<div class="media-body ml-2 text-nowrap">
+			<h6 class="mb-0">Administrador</h6>
+			<span class="text-gray-400 font-size-sm">Cpf: 123.456.789-01</span> <br />
+			<span class="text-gray-400 font-size-sm">Administrator</span>
+		</div>
+	</div>
+	<a class="dropdown-item has-icon" asp-controller="Profile" asp-action="Index"><i class="mr-2" data-feather="user"></i>Profile</a>
+	<a class="dropdown-item has-icon" href="javascript:void(0)"><i class="mr-2" data-feather="settings"></i>Settings</a>
+	<a asp-controller="Login" asp-action="LogOff" class="dropdown-item has-icon text-danger"><i class="mr-2" data-feather="log-out"></i>Sair</a>
+</div>

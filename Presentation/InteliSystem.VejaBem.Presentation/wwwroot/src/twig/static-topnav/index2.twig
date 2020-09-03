@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <link rel="stylesheet" href="{{ folder.plugins }}jqvmap/jqvmap.min.css">
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'home2',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'home2',
+      'sub': ''
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      {% include '../content/_index2.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}chart.js/Chart.min.js"></script>
+  <script src="{{ folder.plugins }}jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="{{ folder.plugins }}jqvmap/jquery.vmap.min.js"></script>
+  <script src="{{ folder.plugins }}jqvmap/maps/jquery.vmap.usa.js"></script>
+  <script>
+    $(() => {
+      {% include '../content/_index2.js' %}
+    })
+  </script>
+
+</body>
+
+</html>

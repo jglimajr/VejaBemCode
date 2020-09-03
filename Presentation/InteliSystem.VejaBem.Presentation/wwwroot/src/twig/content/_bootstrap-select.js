@@ -1,0 +1,56 @@
+$('.bs-select').selectpicker({ style: 'btn' })
+      $('.bs-select-sm').selectpicker({ style: 'btn btn-sm' })
+      $('.bs-select-lg').selectpicker({ style: 'btn btn-lg' })
+      $('.bootstrap-select').on('show.bs.select', function () {
+        this.querySelector('.dropdown-toggle').classList.add('focus')
+      }).on('hide.bs.select', function () {
+        this.querySelector('.dropdown-toggle').classList.remove('focus')
+      })
+      $('.bs-select-creatable').selectpicker({
+        style: 'btn',
+        liveSearch: true,
+        noneResultsText: 'Press Enter to add: <b>{0}</b>'
+      })
+      $('.bs-select-creatable .bs-searchbox .form-control').on('keyup', function (e) {
+        const bs = this.closest('.bootstrap-select')
+        if (bs.querySelector('.no-results')) {
+          if (e.keyCode === 13) {
+            let el = bs.querySelector('select')
+            el.insertAdjacentHTML('afterbegin', `<option value="${$(this).val()}">${$(this).val()}</option>`)
+            let newVal = $(el).val()
+            Array.isArray(newVal) ? newVal.push(this.value) : newVal = this.value
+            $(el).val(newVal)
+            $(el).selectpicker('toggle')
+            $(el).selectpicker('refresh')
+            $(el).selectpicker('render')
+            bs.querySelector('.dropdown-toggle').focus()
+            this.value = ''
+          }
+        }
+      })
+
+      // Clearable
+      function toggleClear(select, el) {
+        el.style.display = select.value == '' ? 'none' : 'inline'
+        if (select.value == '') {
+          select.parentNode.querySelector('.filter-option').classList.remove('mr-4')
+        } else {
+          select.parentNode.querySelector('.filter-option').classList.add('mr-4')
+        }
+      }
+      for (const el of document.querySelectorAll('select.bs-select, select.bs-select-sm, select.bs-select-lg')) {
+        const clearEl = el.parentNode.nextElementSibling
+        if (clearEl && clearEl.classList.contains('bs-select-clear')) {
+          toggleClear(el, clearEl)
+          el.addEventListener('change', function () {
+            toggleClear(this, clearEl)
+          })
+        }
+      }
+      for (const el of document.querySelectorAll('.bs-select-clear')) {
+        el.addEventListener('click', function () {
+          const select = this.previousElementSibling.querySelector('select')
+          $(select).selectpicker('val', '')
+          select.dispatchEvent(new Event('change'))
+        })
+      }

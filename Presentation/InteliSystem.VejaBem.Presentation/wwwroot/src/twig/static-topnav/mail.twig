@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <link rel="stylesheet" href="{{ folder.plugins }}summernote/summernote-bs4.min.css">
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'mail',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '_header.twig' %}
+
+    {% include '_navbar.twig' with {
+      'menu': 'mail',
+      'sub': ''
+    } %}
+
+    <!-- Main body -->
+    <div class="main-body p-0">
+
+      {% include '../content/_mail.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}summernote/summernote-bs4.min.js"></script>
+  <script>
+    $(() => {
+      {% include '../content/_mail.js' %}
+    })
+  </script>
+
+</body>
+
+</html>

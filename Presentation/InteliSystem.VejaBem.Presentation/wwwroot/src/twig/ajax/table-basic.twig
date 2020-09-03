@@ -1,0 +1,8 @@
+      {% include '../content/_table-basic.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_table-basic.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

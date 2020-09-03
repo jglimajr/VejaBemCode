@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
+    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Pessoas\InteliSystem.App.General.Pessoas.csproj" />
+    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Enderecos\InteliSystem.App.General.Enderecos.csproj" />
+    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Usuarios\InteliSystem.App.General.Usuarios.csproj" />
+  </ItemGroup>
+
+</Project>

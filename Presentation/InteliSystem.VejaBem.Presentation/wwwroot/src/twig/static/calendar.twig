@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <link rel="stylesheet" href="{{ folder.plugins }}fullcalendar/core/main.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}fullcalendar/daygrid/main.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}fullcalendar/timegrid/main.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}fullcalendar/list/main.min.css">
+  <link rel="stylesheet" href="{{ folder.plugins }}fullcalendar/bootstrap/main.min.css">
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% include '../include/_sidebar.twig' with {
+    'menu': 'calendar',
+    'sub': ''
+  } %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../include/_header.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Calendar</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      {% include '../content/_calendar.twig' %}
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '../include/_main-js.twig' %}
+
+  <!-- Plugins -->
+  <script src="{{ folder.plugins }}fullcalendar/core/main.min.js"></script>
+  <script src="{{ folder.plugins }}fullcalendar/daygrid/main.min.js"></script>
+  <script src="{{ folder.plugins }}fullcalendar/timegrid/main.min.js"></script>
+  <script src="{{ folder.plugins }}fullcalendar/list/main.min.js"></script>
+  <script src="{{ folder.plugins }}fullcalendar/bootstrap/main.min.js"></script>
+  <script src="{{ folder.plugins }}fullcalendar/interaction/main.min.js"></script>
+  <script>
+    {% include '../content/_calendar.js' %}
+  </script>
+
+</body>
+
+</html>

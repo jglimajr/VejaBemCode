@@ -1,0 +1,11 @@
+      {% include '../content/_input-masks.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}inputmask/jquery.inputmask.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_input-masks.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

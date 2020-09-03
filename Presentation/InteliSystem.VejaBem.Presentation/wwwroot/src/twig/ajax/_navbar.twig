@@ -1,0 +1,19 @@
+<!-- Main navbar -->
+    <nav class="main-navbar navbar main-navbar navbar-expand navbar-light shadow-sm sticky-top">
+      <a class="nav-link nav-link-faded nav-icon rounded-circle" data-scroll="left" href="#"><i class="material-icons">chevron_left</i></a>
+      <div class="navbar-collapse">
+        <div class="navbar-nav nav-pills nav-gap-x-1">{% for item in menus %}{% if (item.subs) %}
+          <div class="nav-item dropdown">
+            <a class="nav-link nav-link-faded dropdown-toggle has-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference=".main">
+              {{ item.icon }}{{ item.title }}{{ item.badgetopnav }}
+            </a>
+            <div class="dropdown-menu">{% for subitem in item.subs %}
+              <a class="dropdown-item" href="{%if(subitem.static)%}../static/{{ subitem.href }}{%else%}#{{ subitem.href|replace({'index': 'dashboard'}) }}{%endif%}.html">{{ subitem.title }}</a>{% endfor %}
+            </div>
+          </div>{% else %}
+          <a class="nav-item nav-link nav-link-faded has-icon" href="{%if(item.static)%}../static/{{ item.href }}{%else%}#{{ item.href|replace({'index': 'dashboard'}) }}{%endif%}.html">{{ item.icon }}{{ item.title }}{{ item.badgetopnav }}</a>{% endif %}{% endfor %}
+        </div>
+      </div>
+      <a class="nav-link nav-link-faded nav-icon rounded-circle" data-scroll="right" href="#"><i class="material-icons">chevron_right</i></a>
+    </nav>
+    <!-- /Main navbar -->

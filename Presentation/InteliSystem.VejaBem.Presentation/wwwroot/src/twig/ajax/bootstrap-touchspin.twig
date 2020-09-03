@@ -1,0 +1,11 @@
+      {% include '../content/_bootstrap-touchspin.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}bootstrap-touchspin/jquery.bootstrap-touchspin.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_bootstrap-touchspin.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

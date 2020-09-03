@@ -1,0 +1,11 @@
+      {% include '../content/_form-elements.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}autosize/autosize.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_form-elements.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

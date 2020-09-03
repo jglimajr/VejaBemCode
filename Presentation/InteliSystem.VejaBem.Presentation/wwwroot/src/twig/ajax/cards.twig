@@ -1,0 +1,13 @@
+      <style>
+        .card-example {
+          max-width: 400px;
+        }
+      </style>
+      {% include '../content/_cards.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_cards.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

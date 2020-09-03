@@ -1,0 +1,28 @@
+<!-- Sidebar -->
+  <div class="sidebar">
+
+    <!-- Sidebar header -->
+    <div class="sidebar-header">
+      {% include '../content/_sidebar-header.twig' %}
+    </div>
+    <!-- /Sidebar header -->
+
+    <!-- Sidebar body -->
+    <div class="sidebar-body">
+      <ul class="nav nav-sub">{% for item in menus %}{% if (item.label) %}
+        <li class="nav-label">{{ item.label }}</li>{% endif %}{% if (item.subs) %}
+        <li class="nav-item">
+          <a class="nav-link has-icon dropdown-toggle{%if(menu==item.menu)%} active show{%endif%}" href="#">{{ item.icon }}{{ item.title }}{{ item.badge }}</a>
+          <ul>{% for subitem in item.subs %}
+            <li><a href="{%if(subitem.static)%}../static/{{ subitem.href }}{%else%}{{ subitem.href }}{%endif%}.html"{%if(sub==subitem.sub)%} class="active"{%endif%}>{{ subitem.title }}</a></li>{% endfor %}
+          </ul>
+        </li>{% else %}
+        <li class="nav-item">
+          <a class="nav-link has-icon{%if(menu==item.menu)%} active{%endif%}" href="{{ item.href }}.html">{{ item.icon }}{{ item.title }}{{ item.badge }}</a>
+        </li>{% endif %}{% endfor %}
+      </ul>
+    </div>
+    <!-- /Sidebar body -->
+
+  </div>
+  <!-- /Sidebar -->

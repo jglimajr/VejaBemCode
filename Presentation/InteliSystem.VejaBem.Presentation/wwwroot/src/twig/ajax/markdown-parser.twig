@@ -1,0 +1,12 @@
+      {% include '../content/_markdown-parser.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}autosize/autosize.min.js',
+    '{{ folder.plugins }}markdown-it/markdown-it.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_markdown-parser.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

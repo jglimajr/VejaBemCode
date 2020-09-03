@@ -1,0 +1,93 @@
+@page "/cadusuario"
+
+<div class="row">
+	<div class="col-md-10">
+		<div class="card">
+			<div class="card-header">
+				<h3 style="text-align: center"><i class="fas fa-user-plus"></i> Novo Usuário</h3>
+			</div>
+			<div class="card-body">
+				<form asp-controller="NewUser" asp-action="Create">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<span>
+								<label asp-for="UserName" class="label">Usuário</label>
+								<span asp-validation-for="UserName" class="text-danger font-size-sm"></span>
+							</span>
+							<span class="input-icon">
+								<i class="fas fa-user"></i>
+								<input type="text" class="form-control text-uppercase" asp-for="UserName" placeholder="joaofulano" required />
+							</span>
+						</div>
+						<div class="form-group col-md-12">
+							<span>
+								<label asp-for="EMail" class="label"></label>
+								<span asp-validation-for="EMail" class="text-danger font-size-sm"></span>
+							</span>
+							<span class="input-icon">
+								<i class="fas fa-envelope"></i>
+								<input type="email" class="form-control text-uppercase" asp-for="EMail" placeholder="joao@email.com.br" />
+							</span>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<span>
+								<label asp-for="PassWord" class="label"></label>
+								<span asp-validation-for="PassWord"></span>
+							</span>
+							<span class="input-icon">
+								<i class="fa fa-lock"></i>
+								<input type="password" asp-for="PassWord" class="form-control" />
+							</span>
+						</div>
+						<div class="form-group col-md-6">
+							<span>
+								<label asp-for="PassWordConfirm" class="label"></label>
+								<span asp-validation-for="PassWordConfirm"></span>
+							</span>
+							<span class="input-icon">
+								<i class="fa fa-lock"></i>
+								<input type="password" asp-for="PassWordConfirm" class="form-control" />
+							</span>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-3">
+							<span>
+								<label asp-for="Pessoa.Cpf" class="label"></label>
+								<span asp-validation-for="Pessoa.Cpf" class="text-danger font-size-sm"></span>
+							</span>
+							<input type="text" class="form-control cpf" asp-for="Pessoa.Cpf" placeholder="123.456.789-72"/>
+						</div>
+						<div class="form-group col-md-9">
+							<span>
+								<label asp-for="Pessoa.Nome" class="label"></label>
+								<span asp-validation-for="Pessoa.Nome" class="text-danger font-size-sm"></span>
+							</span>
+							<input type="text" class="form-control text-uppercase" asp-for="Pessoa.Nome" placeholder="joão fulano de tal"/>
+						</div>
+						<div class="form-group col-md-3">
+							<label asp-for="Pessoa.DataNascimento" class="label"></label>
+							<input type="text" asp-for="Pessoa.DataNascimento" class="form-control fdata calendario text-uppercase" placeholder="dd/mm/aaaa" />
+						</div>
+						<div class="form-group col-md-4">
+							<label asp-for="Pessoa.Sexo" class="label"></label>
+							<select asp-for="Pessoa.Sexo" class="form-control text-uppercase" asp-items="ItComp.EnumToList.GetEnumToList<InteliSystem.Util.Enums.Sexo>()">
+								<option value="">SELECIONAR</option>
+							</select>
+						</div>
+						<div class="form-group col-md-5">
+							<label asp-for="Pessoa.EstadoCivil" class="label"></label>
+							<select asp-for="Pessoa.EstadoCivil" class="form-control text-uppercase" asp-items="ItComp.EnumToList.GetEnumToList<InteliSystem.Util.Enums.EstadoCivil>()">
+							</select>
+						</div>
+					</div>
+					<div class="form-group float-sm-right">
+						<input type="submit" value="Cadastrar" class="btn btn-primary" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

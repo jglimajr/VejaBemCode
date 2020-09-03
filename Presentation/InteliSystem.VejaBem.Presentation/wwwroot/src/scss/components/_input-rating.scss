@@ -1,0 +1,27 @@
+.rating-container {
+  display: inline-flex;
+  direction: rtl;
+  height: 24px;
+  color: $input-placeholder-color;
+}
+.rating-container input {
+  display: none;
+}
+.rating-container label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.rating-container:hover label.active {
+  color: inherit;
+}
+.rating-container > label:hover,
+.rating-container > label:hover ~ label {
+  color: $input-rating-color !important;
+}
+.rating-container > label.active {
+  color: $input-rating-color;
+}
+.input-rating {
+  visibility: hidden;
+  height: 24px;
+}

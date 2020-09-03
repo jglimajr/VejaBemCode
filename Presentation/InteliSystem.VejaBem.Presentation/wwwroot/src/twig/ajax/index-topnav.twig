@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include '../include/_meta.twig' %}
+  {% include '../include/_font-icon.twig' %}
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+  {% include '../include/_main-css.twig' %}
+  <title>{{ title }}</title>
+</head>
+
+<body class="sticky-navbar">
+
+  <!-- Ajax loader -->
+  <div id="ajaxloader" class="fade"></div>
+
+  {% include '_sidebar.twig' %}
+
+  <!-- Main -->
+  <div class="main">
+
+    {% include '../static-topnav/_header.twig' %}
+
+    {% include '_navbar.twig' %}
+
+    <!-- Main body -->
+    <div class="main-body">
+
+      AJAX CONTENT GOES HERE
+
+    </div>
+    <!-- /Main body -->
+
+  </div>
+  <!-- /Main -->
+
+  {% include '../include/_modal-search.twig' %}
+
+  {% include '_main-js.twig' %}
+
+  <!-- Plugins -->
+  <!-- JS plugins goes here -->
+  <script>
+    App.ajax({
+      'container': '.main-body',
+      'default': 'dashboard.html',
+      'breadcrumb': true
+    })
+  </script>
+
+</body>
+
+</html>

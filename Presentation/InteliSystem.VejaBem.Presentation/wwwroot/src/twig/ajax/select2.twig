@@ -1,0 +1,12 @@
+      {% include '../content/_select2.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}select2/css/select2.min.css',
+    '{{ folder.plugins }}select2/js/select2.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_select2.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

@@ -1,0 +1,17 @@
+      {% include '../content/_form-validation.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}bootstrap-select/bootstrap-select.min.css',
+    '{{ folder.plugins }}summernote/summernote-bs4.css',
+    '{{ folder.plugins }}select2/css/select2.min.css',
+    '{{ folder.plugins }}bootstrap-select/bootstrap-select.min.js',
+    '{{ folder.plugins }}summernote/summernote-bs4.min.js',
+    '{{ folder.plugins }}select2/js/select2.min.js',
+    '{{ folder.plugins }}tagin/tagin.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_form-validation.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

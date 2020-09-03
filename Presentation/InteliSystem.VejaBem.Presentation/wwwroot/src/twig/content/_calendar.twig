@@ -1,0 +1,71 @@
+<div class="row gutters-sm">
+        <div class="col-lg-3 mb-3">
+          <div class="card mb-3">
+            <div class="card-header py-1 border-0">
+              <h6>Create Event</h6>
+              <button type="button" data-action="collapse" data-target="#card-body" data-toggle="collapse" aria-expanded="false" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">add</i>
+              </button>
+            </div>
+            <div class="collapse" id="card-body">
+              <div class="card-body">
+                <form id="createEvent" novalidate>
+                  <div class="text-center">
+                    <div class="custom-color custom-color-lg">
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="primary" id="event-primary" class="custom-control-input" checked>
+                        <label class="rounded-circle" for="event-primary" style="background-color:#4279ef"></label>
+                      </div>
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="secondary" id="event-secondary" class="custom-control-input">
+                        <label class="rounded-circle" for="event-secondary" style="background-color:#6c757d"></label>
+                      </div>
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="success" id="event-success" class="custom-control-input">
+                        <label class="rounded-circle" for="event-success" style="background-color:#4cc065"></label>
+                      </div>
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="danger" id="event-danger" class="custom-control-input">
+                        <label class="rounded-circle" for="event-danger" style="background-color:#f05a5c"></label>
+                      </div>
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="warning" id="event-warning" class="custom-control-input">
+                        <label class="rounded-circle" for="event-warning" style="background-color:#ffd062"></label>
+                      </div>
+                      <div class="color-item">
+                        <input type="radio" name="event-color" value="info" id="event-info" class="custom-control-input">
+                        <label class="rounded-circle" for="event-info" style="background-color:#19aec6"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Event title" required>
+                  <button class="btn btn-light btn-block mt-1" type="submit">Add</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h6 class="card-header">Draggable Events</h6>
+            <div class="card-body" id="externalEvents">
+              <ul class="list-group list-group-sm list-group-borderless">
+                <li class="list-group-item fc-event bg-success">Lunch</li>
+                <li class="list-group-item fc-event bg-warning text-body">Go home</li>
+                <li class="list-group-item fc-event bg-info">Do homework</li>
+                <li class="list-group-item fc-event bg-primary">Work on UI design</li>
+                <li class="list-group-item fc-event bg-danger">Sleep tight</li>
+              </ul>
+              <div class="custom-control custom-switch mt-3">
+                <input type="checkbox" class="custom-control-input" id="removeAfterDrop">
+                <label class="custom-control-label" for="removeAfterDrop">Remove after drop</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div>

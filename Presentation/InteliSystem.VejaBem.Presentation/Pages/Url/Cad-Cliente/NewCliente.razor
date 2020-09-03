@@ -1,0 +1,150 @@
+@page "/cad-cliente"
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+		<li class="breadcrumb-item">User</li>
+		<li class="breadcrumb-item active" aria-current="page">Novo Cliente</li>
+	</ol>
+</nav>
+<!-- /Breadcrumb -->
+@*<div class="row gutters-sm">*@
+<div class="row">
+	<div class="col">
+		<div class="card">
+			<form asp-controller="Cliente" asp-action="Add">
+				<section id="section1"></section>
+				<div class="card-header">
+					<h3><i class="fa fa-user-edit"></i> Olá Novo Cliente</h3>
+				</div>
+				<input type="hidden" id="Id" />
+				<div class="card-body">
+					<div class="form-row">
+						<div class="form-group col-md-3">
+							<label id="Pessoa_Cpf"></label>
+							<input id="Pessoa_Cpf" class="form-control cpf text-uppercase" required placeholder="123_456_789-12" focus />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-7">
+							<label id="Pessoa_Nome"></label>
+							<input id="Pessoa_Nome" class="form-control text-uppercase" required placeholder="JOÃO FULANO DE TAL" />
+						</div>
+						<div class="form-group col-md-5">
+							<label id="Pessoa_NomeCurto"></label>
+							<input id="Pessoa_NomeCurto" class="form-control text-uppercase" required placeholder="JOÃO" />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label id="Pessoa_DataNascimento" class="label"></label>
+							<input type="text" id="Pessoa_DataNascimento" class="form-control calendario fdata" placeholder="DD/MM/AAAA" />
+						</div>
+						<div class="form-group col-md-4">
+							<label id="Pessoa_Sexo" class="label"></label>
+							<select id="Pessoa_Sexo" class="form-control text-uppercase" asp-items="InteliSystem_VejaBem_Presentation_Extentions_Utils_EnumToList_GetEnumToList<Sexo>()">
+								<option>SELECIONAR</option>
+							</select>
+						</div>
+						<div class="form-group col-md-4">
+							<label id="Pessoa_EstadoCivil" class="label"></label>
+							<select id="Pessoa_EstadoCivil" class="form-control text-uppercase" asp-items="InteliSystem_VejaBem_Presentation_Extentions_Utils_EnumToList_GetEnumToList<EstadoCivil>()">
+							</select>
+						</div>
+					</div>
+					<hr />
+					<h3><i class="fa fa-house-user"></i> Endereço</h3>
+					<div class="form-row">
+						<div class="col-md-3">
+							<label id="Pessoa_Endereco_Cep" class="label"></label>
+							<div class="input-group">
+								<input type="text" id="Pessoa_Endereco_Cep" class="form-control cep" required placeholder="50000-000" />
+								<div class="input-group-append">
+									<button id="busccep" name="busccep" class="btn btn-light" tooltip="Buscar CEP___"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<section id="section2"></section>
+					<div class="form-row">
+						<div class="form-group col-md-10">
+							<label id="Pessoa_Endereco_Logradouro" class="label"></label>
+							<input id="Pessoa_Endereco_Logradouro" class="form-control text-uppercase" required placeholder="rua logo alí" />
+						</div>
+						<div class="form-group col-md-2">
+							<label id="Pessoa_Endereco_Numero"></label>
+							<input type="text" id="Pessoa_Endereco_Numero" class="form-control inputmask" data-inputmask-alias="numeric" />
+						</div>
+						<div class="form-group col-md-5">
+							<label id="Pessoa_Endereco_Complemento" class="label"></label>
+							<input type="text" id="Pessoa_Endereco_Complemento" class="form-control text-uppercase" placeholder="Bloco: B Apt:01" />
+						</div>
+						<div class="form-group col-md-7">
+							<label id="Pessoa_Endereco_Bairro" class="label"></label>
+							<input type="text" id="Pessoa_Endereco_Bairro" class="form-control text-uppercase" required />
+						</div>
+						<div class="form-group col-md-9">
+							<label id="Pessoa_Endereco_Cidade" class="label"></label>
+							<input type="text" id="Pessoa_Endereco_Cidade" class="form-control text-uppercase" required placeholder="cidade de longe de casa" />
+						</div>
+						<div class="form-group col-md-3">
+							<label id="Pessoa_Endereco_Uf" class="label"></label>
+							<select id="Pessoa_Endereco_Uf" class="form-control text-uppercase">
+								<option value="AC">ACRE</option>
+								<option value="AL">ALAGOAS</option>
+								<option value="AP">AMAPÁ</option>
+								<option value="AM">AMAZONAS</option>
+								<option value="BA">BAHIA</option>
+								<option value="CE">CEARÁ</option>
+								<option value="DF">DISTRITO FEDERAL</option>
+								<option value="ES">ESPÍRITO SANTO</option>
+								<option value="GO">GOIÁS</option>
+								<option value="MA">MARANHÃO</option>
+								<option value="MT">MATO GROSSO</option>
+								<option value="MS">MATO GROSSO DO SUL</option>
+								<option value="MG">MINAS GERAIS</option>
+								<option value="PA">PARÁ</option>
+								<option value="PB">PARAÍBA</option>
+								<option value="PR">PARANÁ</option>
+								<option value="PE">PERNAMBUCO</option>
+								<option value="PI">PIAUÍ</option>
+								<option value="RJ">RIO DE JANEIRO</option>
+								<option value="RN">RIO GRANDE DO NORTE</option>
+								<option value="RS">RIO GRANDE DO SUL</option>
+								<option value="RO">RONDÔNIA</option>
+								<option value="RR">RORAIMA</option>
+								<option value="SC">SANTA CATARINA</option>
+								<option value="SP">SÃO PAULO</option>
+								<option value="SE">SERGIPE</option>
+								<option value="TO">TOCANTINS</option>
+							</select>
+						</div>
+					</div>
+
+					<section id="section3"></section>
+					<span class="group">
+						<div class="form-group float-sm-left">
+							<span class="input-append">
+								<a class="btn btn-info" asp-action="Index"><i class="fa fa-arrow-circle-o-left"></i> Voltar</a>
+							</span>
+						</div>
+						<div class="form-group float-sm-right">
+							<input type="submit" class="btn btn-outline-primary" value="Salvar" />
+						</div>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-2 d-none d-xl-block">
+		<div class="nav-section">
+			<label class="text-muted">On This Page</label>
+			<nav id="navSection" class="nav flex-column">
+				<a href="#section1" class="nav-link nav-link-sm">Dados Cadastrais</a>
+				<a href="#section2" class="nav-link nav-link-sm">Endereço</a>
+				<a href="#section3" class="nav-link nav-link-sm">Salvar</a>
+			</nav>
+		</div>
+	</div>
+</div>

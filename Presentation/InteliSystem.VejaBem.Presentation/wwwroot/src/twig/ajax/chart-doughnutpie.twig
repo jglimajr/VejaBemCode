@@ -1,0 +1,11 @@
+      {% include '../content/_chart-doughnutpie.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}chart.js/Chart.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_chart-doughnutpie.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

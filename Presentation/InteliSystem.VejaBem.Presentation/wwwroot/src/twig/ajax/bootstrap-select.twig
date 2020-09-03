@@ -1,0 +1,12 @@
+      {% include '../content/_bootstrap-select.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}bootstrap-select/bootstrap-select.min.css',
+    '{{ folder.plugins }}bootstrap-select/bootstrap-select.min.js',
+  ]
+  App.loadPlugins(plugins, null).then(() => {
+    {% include '../content/_bootstrap-select.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

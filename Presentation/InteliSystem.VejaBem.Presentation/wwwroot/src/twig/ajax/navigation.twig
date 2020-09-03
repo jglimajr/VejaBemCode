@@ -1,0 +1,8 @@
+      {% include '../content/_navigation.twig' %}
+
+<script>
+  App.loadPlugins(null, null).then(() => {
+    {% include '../content/_navigation.js' %}
+
+  }).then(() => App.stopLoading())
+</script>

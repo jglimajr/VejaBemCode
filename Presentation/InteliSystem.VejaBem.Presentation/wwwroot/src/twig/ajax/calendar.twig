@@ -1,0 +1,21 @@
+      {% include '../content/_calendar.twig' %}
+
+<script>
+  var plugins = [
+    '{{ folder.plugins }}fullcalendar/core/main.min.css',
+    '{{ folder.plugins }}fullcalendar/daygrid/main.min.css',
+    '{{ folder.plugins }}fullcalendar/timegrid/main.min.css',
+    '{{ folder.plugins }}fullcalendar/list/main.min.css',
+    '{{ folder.plugins }}fullcalendar/bootstrap/main.min.css',
+    '{{ folder.plugins }}fullcalendar/core/main.min.js',
+    '{{ folder.plugins }}fullcalendar/daygrid/main.min.js',
+    '{{ folder.plugins }}fullcalendar/timegrid/main.min.js',
+    '{{ folder.plugins }}fullcalendar/list/main.min.js',
+    '{{ folder.plugins }}fullcalendar/bootstrap/main.min.js',
+    '{{ folder.plugins }}fullcalendar/interaction/main.min.js',
+  ]
+  App.loadPlugins(plugins, null, true).then(() => {
+    {% include '../content/_calendar.js' %}
+
+  }).then(() => App.stopLoading())
+</script>
