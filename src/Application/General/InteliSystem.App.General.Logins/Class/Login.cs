@@ -14,6 +14,5 @@ namespace InteliSystem.App.General.Logins
         public string Ip { get; internal set; }
         public string Browser { get; internal set; }
         public string SistemaOperacional { get; internal set; }
-        public string Hash { get; internal set; }
     }
 }

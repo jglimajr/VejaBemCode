@@ -6,6 +6,5 @@ namespace InteliSystem.Util.AbstractClass
     {
         public virtual DateTime DataHoraCadastro { get; set; }
         public virtual DateTime DataHoraAlteracao { get; set; }
-        public string Hash { get; set; }
     }
 }
