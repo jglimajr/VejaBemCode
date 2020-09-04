@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using InteliSystem.App.General.Enderecos;
-using InteliSystem.Util.AbstracClass;
+using InteliSystem.Util.AbstractClass;
 using InteliSystem.Util.Enums;
 
 namespace InteliSystem.App.General.Pessoas

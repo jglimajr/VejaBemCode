@@ -1,7 +1,7 @@
 using System;
 using InteliSystem.Util.Enums;
 
-namespace InteliSystem.Util.AbstracClass
+namespace InteliSystem.Util.AbstractClass
 {
     public abstract class GuidBase
     {
@@ -17,5 +17,6 @@ namespace InteliSystem.Util.AbstracClass
         { 
             get; set; 
         }
+        public string Hash { get; set; }
     }
 }

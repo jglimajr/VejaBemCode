@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using InteliSystem.App.General.Pessoas;
-using InteliSystem.Util.AbstracClass;
+using InteliSystem.Util.AbstractClass;
 
 namespace InteliSystem.App.General.Usuarios
 {

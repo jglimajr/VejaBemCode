@@ -1,4 +1,4 @@
-using InteliSystem.Util.AbstracClass;
+using InteliSystem.Util.AbstractClass;
 
 namespace InteliSystem.App.General.Enderecos
 {
