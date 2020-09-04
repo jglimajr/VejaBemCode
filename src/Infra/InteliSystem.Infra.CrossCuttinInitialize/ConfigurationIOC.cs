@@ -1,9 +1,9 @@
 
 using Autofac;
 using InteliSystem.DbConnection;
-using InteliSystem.App.General.Pessoas;
-using InteliSystem.App.General.Usuarios;
-using InteliSystem.App.General.Enderecos;
+using InteliSystem.App.Management.Pessoas;
+using InteliSystem.App.Management.Usuarios;
+using InteliSystem.App.Management.Enderecos;
 
 namespace InteliSystem.Infra.CrossCuttinInitialize
 {

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Util\InteliSystem.Util\InteliSystem.Util.csproj" />
+    <ProjectReference Include="..\..\..\Infra\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
+    <ProjectReference Include="..\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" />
+    <ProjectReference Include="..\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

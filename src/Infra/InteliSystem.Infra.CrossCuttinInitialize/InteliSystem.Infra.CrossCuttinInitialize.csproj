@@ -10,9 +10,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
-    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Pessoas\InteliSystem.App.General.Pessoas.csproj" />
-    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Enderecos\InteliSystem.App.General.Enderecos.csproj" />
-    <ProjectReference Include="..\..\Application\General\InteliSystem.App.General.Usuarios\InteliSystem.App.General.Usuarios.csproj" />
+    <ProjectReference Include="..\..\Application\Management\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
+    <ProjectReference Include="..\..\Application\Management\InteliSystem.App.Management.Enderecos\InteliSystem.App.Management.Enderecos.csproj" />
+    <ProjectReference Include="..\..\Application\Management\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" />
   </ItemGroup>
 
 </Project>
