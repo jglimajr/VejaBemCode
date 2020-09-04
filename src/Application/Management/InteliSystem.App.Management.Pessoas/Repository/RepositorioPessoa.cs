@@ -13,7 +13,7 @@ namespace InteliSystem.App.Management.Pessoas
         private readonly IConnection _conn;
         private const string SelectBase = "Select Id, EnderecoId, Cpf, Nome, NomeCurto, DataNascimento, Sexo, EstadoCivil, DataHoraCadastro, DataHoraAlteracao, Situacao From Pessoa";
         #endregion
-        internal RepositorioPessoa(IConnection conn)
+        public RepositorioPessoa(IConnection conn)
         {
             this._conn = conn;
         }

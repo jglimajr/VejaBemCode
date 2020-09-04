@@ -22,8 +22,8 @@ namespace InteliSystem.Infra.CrossCuttinInitialize
            
            #region Repositories
             builder.RegisterType<RepositorioPessoa>().As<IRepositorioPessoa>();
-            builder.RegisterType<RepositorioUsuario>().As<RepositorioUsuario>();
-            builder.RegisterType<RepositorioEndereco>().As<RepositorioEndereco>();
+            builder.RegisterType<RepositorioUsuario>().As<IRepositorioUsuario>();
+            builder.RegisterType<RepositorioEndereco>().As<IRepositorioEndereco>();
            #endregion
         }
     }

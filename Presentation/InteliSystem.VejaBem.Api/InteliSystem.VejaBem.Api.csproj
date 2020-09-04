@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Autofac.Configuration" Version="5.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Infra\InteliSystem.Infra.CrossCuttinInitialize\InteliSystem.Infra.CrossCuttinInitialize.csproj" />
+    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Enderecos\InteliSystem.App.Management.Enderecos.csproj" />
+    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Logins\InteliSystem.App.Management.Logins.csproj" />
+    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
+    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Secoes\InteliSystem.App.Management.Secoes.csproj" />
+    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" />
+  </ItemGroup>
+
+
+</Project>

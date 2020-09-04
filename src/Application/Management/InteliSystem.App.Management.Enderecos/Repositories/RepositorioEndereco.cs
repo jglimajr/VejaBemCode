@@ -1,16 +1,20 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using InteliSystem.DbConnection;
 
 namespace InteliSystem.App.Management.Enderecos
 {
-    public class RepositorioEndereco : IRepositorioEndereco
+    public class RepositorioEndereco : RepositoryBase, IRepositorioEndereco
     {
-        public Task<int> Add(Endereco obj)
+        private readonly IConnection _conn;
+        private const string SelectBase = "Select Id, Nome, Logradouro, Numero, Complemento, Bairro, " +
+                                            "Cidade, Uf, Cep, Situacao, DataHoraCadastro, DataHoraAlteracao, Hash From Endereco";
+        public RepositorioEndereco(IConnection conn) : base(conn)
         {
-            throw new System.NotImplementedException();
+            this._conn = conn;
         }
 
-        public void Dispose()
+        public Task<int> Add(Endereco obj)
         {
             throw new System.NotImplementedException();
         }
@@ -22,12 +26,18 @@ namespace InteliSystem.App.Management.Enderecos
 
         public Task<IEnumerable<Endereco>> GetAll()
         {
-            throw new System.NotImplementedException();
+            var sSql = $"{SelectBase}";
+            var retorno = this._conn.GetListAsync<Endereco>(comando: sSql);
+
+            return retorno;
         }
 
         public Task<Endereco> GetById(object id)
         {
-            throw new System.NotImplementedException();
+            var sSql = $"{SelectBase} Where Id = @Id";
+            var retorno = this._conn.GetObjectAsync<Endereco>(comando: sSql, param: new { Id = id });
+
+            return retorno;
         }
 
         public Task<int> Update(Endereco obj)

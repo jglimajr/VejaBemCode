@@ -5,6 +5,11 @@ namespace InteliSystem.App.Management.Enderecos
 {
     public class ManutencaoEndereco : IManutencaoEndereco
     {
+        private readonly IRepositorioEndereco _repositorio;
+        public ManutencaoEndereco(IRepositorioEndereco repositorio)
+        {
+            this._repositorio = repositorio;
+        }
         public Task Add(Endereco obj)
         {
             throw new System.NotImplementedException();
@@ -12,7 +17,7 @@ namespace InteliSystem.App.Management.Enderecos
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            this._repositorio.Dispose();
         }
 
         public Task Excluir(object id)
@@ -22,12 +27,13 @@ namespace InteliSystem.App.Management.Enderecos
 
         public Task<IEnumerable<Endereco>> GetAll()
         {
-            throw new System.NotImplementedException();
+            return this._repositorio.GetAll();
         }
 
         public Task<Endereco> GetById(object id)
         {
-            throw new System.NotImplementedException();
+            var retorno = this._repositorio.GetById(id);
+            return retorno;
         }
 
         public Task Update(Endereco obj)

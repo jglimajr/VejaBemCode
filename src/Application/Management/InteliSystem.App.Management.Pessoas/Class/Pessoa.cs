@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using InteliSystem.App.Management.Enderecos;
 using InteliSystem.Util.AbstractClass;
 using InteliSystem.Util.Enums;
@@ -14,6 +15,7 @@ namespace InteliSystem.App.Management.Pessoas
             get => base.Id;
             set => base.Id = value;
         }
+        [JsonIgnore()]
         public string EnderecoId { get; set; } 
         public Endereco Endereco { get; set; }
         [Display(Name="Cpf")]
