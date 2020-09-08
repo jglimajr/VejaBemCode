@@ -52,11 +52,7 @@ namespace InteliSystem.App.Management.Pessoas
             retorno.Wait();
             retorno.Result.ToList().ForEach(pessoa =>
             {
-                if (!pessoa.EnderecoId.IsEmpty()) {
-                    var endereco = this._manuEndereco.GetById(pessoa.EnderecoId);
-                    endereco.Wait();
-                    pessoa.Endereco = endereco.Result;
-                }
+                pessoa.Endereco = GetEndereco(pessoa.EnderecoId);
             });
 
             return retorno;
@@ -69,31 +65,31 @@ namespace InteliSystem.App.Management.Pessoas
                 throw new NullReferenceException();
             }
 
-            var retorno = this._repositorio.GetById(cpf);
+            var retorno = this._repositorio.GetByCpf(cpf);
             retorno.Wait();
             if (!(retorno.Result is Pessoa))
             {
-                return Task<Pessoa>.Run(() => new Pessoa());
+                return null;
             }
-
-            return Task<Pessoa>.Run(() => retorno);
+            var pessoa = retorno.Result;
+            pessoa.Endereco = GetEndereco(pessoa.EnderecoId);
+            return Task<Pessoa>.Run(() => pessoa);
         }
 
         public Task<Pessoa> GetById(object id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 throw new NullReferenceException();
             }
 
             var retorno = this._repositorio.GetById(id);
             retorno.Wait();
-            if (!(retorno.Result is Pessoa))
-            {
-                return Task<Pessoa>.Run(() => new Pessoa());
+            if (!(retorno.Result is Pessoa)) {
+                return null;
             }
-
-            return Task<Pessoa>.Run(() => retorno);
+            var pessoa = retorno.Result;
+            pessoa.Endereco = GetEndereco(pessoa.EnderecoId);
+            return Task<Pessoa>.Run(() => pessoa);
         }
 
         public Task Update(Pessoa pessoa)
@@ -102,6 +98,16 @@ namespace InteliSystem.App.Management.Pessoas
             retorno.Wait();
 
             return Task.Run(() => retorno.Result == 1);
+        }
+
+        private Endereco GetEndereco(string enderecoId)
+        {
+            if (enderecoId.IsEmpty()){
+                return null;
+            }
+            var endereco = this._manuEndereco.GetById(enderecoId);
+            endereco.Wait();
+            return endereco.Result;
         }
     }
 }

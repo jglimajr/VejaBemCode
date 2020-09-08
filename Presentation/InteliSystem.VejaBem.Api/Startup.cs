@@ -43,9 +43,7 @@ namespace InteliSystem.VejaBem.Api
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
