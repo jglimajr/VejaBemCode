@@ -4,7 +4,7 @@ using InteliSystem.App.Management.Pessoas;
 using System.Threading.Tasks;
 using InteliSystem.Util.Extentions;
 
-namespace InteliSystem.VejaBem.Api.Controllers
+namespace InteliSystem.VejaBem.Api.Controllers.V1
 {
     [ApiController]
     public class PessoaController : ControllerBase
@@ -15,7 +15,7 @@ namespace InteliSystem.VejaBem.Api.Controllers
         {
             this._manutencao = manutencao;
         } 
-        [Route("api/[controller]/")]
+        [Route("api/v1/[controller]/")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -23,7 +23,7 @@ namespace InteliSystem.VejaBem.Api.Controllers
             return Ok(retorno);
         }
          
-         [Route("api/[controller]/Obter/{id?}")]
+         [Route("api/v1/[controller]/Obter/{id?}")]
          [HttpGet("id")]
          public async Task<IActionResult> GetPessoa(string id)
          {
@@ -36,7 +36,7 @@ namespace InteliSystem.VejaBem.Api.Controllers
              }
              return Ok(pessoa);
          }
-         [Route("api/[controller]/Cpf/{cpf?}")]
+         [Route("api/v1/[controller]/Cpf/{cpf?}")]
          [HttpGet("cpf")]
          public async Task<IActionResult> GetPessoaByCpf(string cpf)
          {

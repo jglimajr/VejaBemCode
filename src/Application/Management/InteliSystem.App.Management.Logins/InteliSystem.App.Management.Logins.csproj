@@ -6,6 +6,7 @@
     <ProjectReference Include="..\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
     <ProjectReference Include="..\..\..\Util\InteliSystem.Util\InteliSystem.Util.csproj" />
     <ProjectReference Include="..\..\..\Infra\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
+    <ProjectReference Include="..\InteliSystem.App.Management.Secoes\InteliSystem.App.Management.Secoes.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
