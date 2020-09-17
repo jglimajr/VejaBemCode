@@ -58,7 +58,9 @@
                 "publish",
                 "${workspaceFolder}/Presentation/InteliSystem.VejaBem.Api/InteliSystem.VejaBem.Api.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "/p:DeployOnBuild=true",
+                "/p:PublishProfile=Test"
             ],
             "problemMatcher": "$msCompile"
         },

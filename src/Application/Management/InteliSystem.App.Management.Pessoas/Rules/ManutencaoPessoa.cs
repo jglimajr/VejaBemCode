@@ -60,7 +60,7 @@ namespace InteliSystem.App.Management.Pessoas
 
         public Task<Pessoa> GetByCpf(string cpf)
         {
-            if (cpf.IsEmpty())
+            if (cpf.OnlyNumber().IsEmpty())
             {
                 throw new NullReferenceException();
             }

@@ -4,7 +4,7 @@ using InteliSystem.App.Management.Secoes;
 using InteliSystem.App.Management.Usuarios;
 using InteliSystem.Util.Extentions;
 
-namespace InteliSystem.App.Management.Logins.Rules
+namespace InteliSystem.App.Management.Logins
 {
     public class ManutencaoLogin : IManutencaoLogin
     {
@@ -42,8 +42,17 @@ namespace InteliSystem.App.Management.Logins.Rules
             secao = secaoAsync.Result;
             Login login = new Login(){
                 Id = secao.Id,
-                Usuario
-            }
+                Usuario = usuario,
+                UsuarioId = usuario.Id,
+                Browser = secao.Browser,
+                Ip = secao.Ip,
+                SistemaOperacional = secao.Ip,
+                Situacao = secao.Situacao,
+                DataHoraAcesso = secao.DataHoraAcesso,
+                DataHoraUltimoAcesso = secao.DataHoraUltimoAcesso
+            };
+
+            return Task<Login>.Run(() => login);
         }
     }
 }

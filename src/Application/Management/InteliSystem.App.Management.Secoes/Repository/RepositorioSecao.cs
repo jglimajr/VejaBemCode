@@ -8,7 +8,7 @@ namespace InteliSystem.App.Management.Secoes
     public class RepositorioSecao : RepositoryBase, IRepositorioSecao
     {
         private readonly IConnection _conn;
-        private const string SelectBase = "Select Se.Id, Se.UsuarioId, Se.DataHoraAcesso, Se.DataHoraUltimoAcesso, Se.Ip, Se.Browser, Se.SistemaOperacaional, Se.Situacao, Se.Hash From Sesao Se";
+        private const string SelectBase = "Select Se.Id, Se.UsuarioId, Se.DataHoraAcesso, Se.DataHoraUltimoAcesso, Se.Ip, Se.Browser, Se.SistemaOperacional, Se.Situacao, Se.Hash From Secao Se";
         public RepositorioSecao(IConnection conn)
             : base(conn)
         {

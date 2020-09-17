@@ -12,12 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Infra\InteliSystem.Infra.CrossCuttinInitialize\InteliSystem.Infra.CrossCuttinInitialize.csproj" />
-    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Enderecos\InteliSystem.App.Management.Enderecos.csproj" />
-    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Logins\InteliSystem.App.Management.Logins.csproj" />
-    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
-    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Secoes\InteliSystem.App.Management.Secoes.csproj" />
-    <ProjectReference Include="..\..\src\Application\Management\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" />
+    <ProjectReference Include="..\..\Src\Infra\InteliSystem.Infra.CrossCuttinInitialize\InteliSystem.Infra.CrossCuttinInitialize.csproj" />
+    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Enderecos\InteliSystem.App.Management.Enderecos.csproj" />
+    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Logins\InteliSystem.App.Management.Logins.csproj" />
+    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
+    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Secoes\InteliSystem.App.Management.Secoes.csproj" />
+    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" />
   </ItemGroup>
 
 
