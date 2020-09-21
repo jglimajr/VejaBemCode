@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using InteliSystem.Util.AbstractClass;
+using InteliSystem.Util.Extentions;
 
 namespace InteliSystem.App.Management.Enderecos
 {
@@ -28,5 +29,10 @@ namespace InteliSystem.App.Management.Enderecos
         [StringLength(8, MinimumLength = 8, ErrorMessage = "O {0} deve conter {1}")]
         [RegularExpression(@"^\d{2}.\d{3}-\d{3}$", ErrorMessage = "{0} com formato inválido")]
         public string Cep { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Logradouro}, {(Numero.IsEmpty() ? "S/N" : Numero)}";
+        }
     }
 }

@@ -1,13 +1,14 @@
 using System;
+using FluentValidator;
 using InteliSystem.Util.Enums;
 
 namespace InteliSystem.Util.AbstractClass
 {
-    public abstract class GuidBase
+    public abstract class GuidBase : Notifiable
     {
         public GuidBase()
         {
-            this.Id = Guid.NewGuid().ToString();
+            this.Id = Guid.NewGuid().ToString().ToUpper().Replace("-", "");
         }
         public virtual string Id 
         { 

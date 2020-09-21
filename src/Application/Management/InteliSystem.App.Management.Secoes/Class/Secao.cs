@@ -15,5 +15,10 @@ namespace InteliSystem.App.Management.Secoes
         public string Ip { get; set; }
         public string Browser { get; set; }
         public string SistemaOperacional { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.Id}-{Usuario.UserName}";
+        }
     }
 }

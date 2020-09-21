@@ -35,5 +35,9 @@ namespace InteliSystem.App.Management.Pessoas
         public EstadoCivil EstadoCivil { get; set; }
         [Display(Name="Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
+        public override string ToString()
+        {
+            return $"{Nome}";
+        }
     }
 }

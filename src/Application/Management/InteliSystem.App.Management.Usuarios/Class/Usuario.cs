@@ -26,7 +26,11 @@ namespace InteliSystem.App.Management.Usuarios
         [DisplayName("E-Mail")]
         [EmailAddress(ErrorMessage = "")]
         public string Email { get; set; }
-        public short AcessoErro { get; set; }
+        public short AcessoErro { get; set; } = 0;
         public string SocialToken { get; set; }
+        public override string ToString()
+        {
+            return $"{UserName}";
+        }
     }
 }
