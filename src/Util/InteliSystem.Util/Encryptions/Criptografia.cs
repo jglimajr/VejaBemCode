@@ -22,8 +22,8 @@ namespace InteliSystem.Util.Encryptions
 		public Criptografia()
 		{
 			des = new TripleDESCryptoServiceProvider();
-			chave = Encoding.UTF8.GetBytes("");
-			iv = Encoding.UTF8.GetBytes("");
+			chave = Encoding.UTF8.GetBytes("KUgygTR$6@¨%@8Wj18&98(#(");
+			iv = Encoding.UTF8.GetBytes("(&eq15H*");
 			des.Key = chave;
 			des.IV = iv;
 		}
@@ -36,6 +36,11 @@ namespace InteliSystem.Util.Encryptions
 		{
 
 			des.Mode = mode;
+		}
+		public Criptografia(string chave)
+			: this()
+		{
+			des.Key = Encoding.UTF8.GetBytes(chave);
 		}
 		/// <summary>
 		/// Construtor
@@ -91,7 +96,7 @@ namespace InteliSystem.Util.Encryptions
 		/// </summary>
 		/// <param name="valor">Valor a ser Criptografado</param>
 		/// <returns></returns>
-		public string EncriptarTexto(string valor)
+		public string Encriptar(string valor)
 		{
 			byte[] buffer;
 			var texto = new MemoryStream();
@@ -128,7 +133,7 @@ namespace InteliSystem.Util.Encryptions
 		/// </summary>
 		/// <param name="valor">Valor a ser Descriptografado</param>
 		/// <returns></returns>
-		public string DesencriptarTexto(string valor)
+		public string Desencriptar(string valor)
 		{
 			byte[] buffer;
 			var texto = new MemoryStream();
@@ -158,7 +163,7 @@ namespace InteliSystem.Util.Encryptions
 			}
 		}
 
-		public static string GerarSenhas(int tamanho = 20)
+		public static string GerarSenha(int tamanho = 20)
 		{
 			// Numero de digitos da senha
 			string senha = string.Empty;
@@ -190,7 +195,7 @@ namespace InteliSystem.Util.Encryptions
 			return senha;
 		}
 
-		public static string GerarKey(string ibase = "", short tamanho = 24)
+		public static string GerarChave(string ibase = "", short tamanho = 24)
 		{
 			
 			var bytes = Encoding.UTF8.GetBytes("&%#45687@!#14+4");
@@ -217,13 +222,13 @@ namespace InteliSystem.Util.Encryptions
 			return chave;
 		}
 
-		public String DesencriptarTextoComRetornoHexadecimal(string value)
+		public String DesencriptarHexadecimal(string value)
 		{
 			try {
 
 				var criptografia = HexaToTexto(value);
 
-				var texto = DesencriptarTexto(criptografia);
+				var texto = Desencriptar(criptografia);
 
 				return texto;
 
@@ -232,11 +237,11 @@ namespace InteliSystem.Util.Encryptions
 			}
 		}
 
-		public String EncriptarTextoComRetornoHexadecimal(string value)
+		public String EncriptarHexadecimal(string value)
 		{
 			try {
 
-				var criptografia = EncriptarTexto(value);
+				var criptografia = Encriptar(value);
 
 				return TextoToHexa(criptografia);
 

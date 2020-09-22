@@ -6,6 +6,7 @@ using System.Net.Mail;
 using FluentValidator.Validation;
 using InteliSystem.Util.AbstractClass;
 using InteliSystem.Util.Enums;
+using InteliSystem.Util.ValueObjects;
 
 namespace InteliSystem.Domain.Management
 {

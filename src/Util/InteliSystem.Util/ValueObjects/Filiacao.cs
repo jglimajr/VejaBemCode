@@ -1,7 +1,7 @@
 using System;
 using FluentValidator;
 
-namespace InteliSystem.Domain.Management
+namespace InteliSystem.Util.ValueObjects
 {
     public class Filiacao : Notifiable
     {

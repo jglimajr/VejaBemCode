@@ -1,9 +1,8 @@
 using System;
 using FluentValidator;
 using FluentValidator.Validation;
-using InteliSystem.Util.Extentions;
 
-namespace InteliSystem.Domain.Management
+namespace InteliSystem.Util.ValueObjects
 {
     public class Nome : Notifiable
     {
