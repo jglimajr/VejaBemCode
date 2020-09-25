@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using InteliSystem.Util.Extentions;
 using InteliSystem.VejaBem.Api.Util;
 using Microsoft.AspNetCore.Http;
+using System;
 
 namespace InteliSystem.VejaBem.Api.Controllers.V1
 {
@@ -34,11 +35,11 @@ namespace InteliSystem.VejaBem.Api.Controllers.V1
         //     }
 
         // }
-        [Route("api/V1/[Controller]/{id?}")]
-        [HttpGet("id")]
-        public async Task<IActionResult> GetUsuario(string id)
+        [Route("api/[controller]/V1/{id:Guid}")]
+        [HttpGet]
+        public async Task<IActionResult> Get(Guid id)
         {
-            if (id.IsEmpty())
+            if (id.ToString().IsEmpty())
             {
                 ModelState.AddModelError("id", "Usuário não informado ou inválido");
                 return ValidationControllers.ValidationMessages(StatusCodes.Status204NoContent, title: "Usuario", modelStateDictionary: ModelState);
@@ -53,6 +54,13 @@ namespace InteliSystem.VejaBem.Api.Controllers.V1
             {
                 return ValidationControllers.ValidationMessages(StatusCodes.Status500InternalServerError, "Erro Grave", exception: e);
             }
+        }
+        [Route("api/[controller]/V1/cpf/{cpf}")]
+        [HttpGet]
+        public async Task<IActionResult> GetByCpf(string cpf)
+        {
+            
+            return Ok();
         }
     }
 }

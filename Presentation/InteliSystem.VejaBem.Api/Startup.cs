@@ -1,18 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Autofac;
-using InteliSystem.Infra.CrossCuttinInitialize;
+using InteliSystem.VejaBem.Api.Util;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace InteliSystem.VejaBem.Api
 {
@@ -40,31 +32,46 @@ namespace InteliSystem.VejaBem.Api
             //     options.CheckConsentNeeded = context => true;
             //     options.MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.None;
             // });
-            services.AddMvc();
+            // services.AddMvcCore().AddMvcOptions(options =>
+            //     options.EnableEndpointRouting = false);
+            services.AddMvc().AddMvcOptions(options => 
+                options.EnableEndpointRouting = false
+            ).SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
+            services.AddResponseCompression();
+            //services.AddAuthorization();
+            //services.AddTransients();
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "VejaBem - API",
+                    Version = "v1",
+                    Description = "Api para consumir o servido do Sistema Veja Bem"
+                });
+            });
 
         }
 
-        public void ConfigureContainer(ContainerBuilder buider)
-        {
-            buider.RegisterModule(new ModuloIOC());
-        }
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
-            app.UseRouting();
-            app.UseAuthorization();
             app.UseMvc();
+            app.UseResponseCompression();
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Veja Bem API Info");
+                s.RoutePrefix = string.Empty;
+            });
+            
+            // app.UseHttpsRedirection();
+            //app.UseRouting();
+            // app.UseAuthorization();
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllers();
-            // });
         }
     }
 }
