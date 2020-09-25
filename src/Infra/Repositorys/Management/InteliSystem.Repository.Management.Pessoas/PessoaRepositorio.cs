@@ -1,13 +1,14 @@
-using System;
 using InteliSystem.DbConnection;
+using InteliSystem.Domain.Management.Pessoas;
+using InteliSystem.Domain.Management.Pessoas.Repository;
 using InteliSystem.Util.Enums;
 
-namespace InteliSystem.Domain.Management
+namespace InteliSystem.Repository.Management.Pessoas
 {
-    public class RepositorioPessoa
+    public class PessoaRepositorio : IPessoaRepositorio
     {
         private readonly IConnection _conexao;
-        public RepositorioPessoa(IConnection conexao)
+        public PessoaRepositorio(IConnection conexao)
         {
             this._conexao = conexao;
         }
@@ -44,11 +45,16 @@ namespace InteliSystem.Domain.Management
             this._conexao.Execute(sSql, param);
         }
 
-        public void Excluir(string id)
+        public void Excluir(object id)
         {
             var sSql = "Update Pessoa Set Situacao = @Situacao Where Id = @Id";
 
             this._conexao.Execute(sSql, new { Id = id, Situacao = Situacao.Excluido });
+        }
+
+        public void Dispose()
+        {
+            _conexao.Dispose();
         }
     }
 }

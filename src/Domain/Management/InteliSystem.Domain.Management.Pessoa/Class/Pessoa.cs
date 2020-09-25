@@ -8,7 +8,7 @@ using InteliSystem.Util.AbstractClass;
 using InteliSystem.Util.Enums;
 using InteliSystem.Util.ValueObjects;
 
-namespace InteliSystem.Domain.Management
+namespace InteliSystem.Domain.Management.Pessoas
 {
     public class Pessoa : ClassBase
     {

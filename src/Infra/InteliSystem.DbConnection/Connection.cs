@@ -17,6 +17,7 @@ namespace InteliSystem.DbConnection
         {
             _conn = new MySql.Data.MySqlClient.MySqlConnection("Server=localhost;Port=3307;Database=dbgerencial;Uid=root;Pwd=29532561;Pooling=True;Connection Timeout=3600;default command timeout=3600;");
         }
+
         #endregion
         public void Open()
         {

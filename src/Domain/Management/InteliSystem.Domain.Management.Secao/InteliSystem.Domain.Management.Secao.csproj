@@ -2,9 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Util\InteliSystem.Util\InteliSystem.Util.csproj" />
-    <ProjectReference Include="..\..\..\Infra\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
-    <ProjectReference Include="..\InteliSystem.Domain.Management.Endereco\InteliSystem.Domain.Management.Endereco.csproj" />
-    <ProjectReference Include="..\..\..\Util\InteliSystem.Shareds\InteliSystem.Shareds.csproj" />
+    <ProjectReference Include="..\InteliSystem.Domain.Management.Usuario\InteliSystem.Domain.Management.Usuario.csproj" />
   </ItemGroup>
 
   <ItemGroup>
