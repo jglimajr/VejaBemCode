@@ -11,13 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Infra\InteliSystem.Infra.CrossCuttinInitialize\InteliSystem.Infra.CrossCuttinInitialize.csproj" />
-    <!-- <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Enderecos\InteliSystem.App.Management.Enderecos.csproj" />
-    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Logins\InteliSystem.App.Management.Logins.csproj" />
-    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Pessoas\InteliSystem.App.Management.Pessoas.csproj" />
-    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Secoes\InteliSystem.App.Management.Secoes.csproj" />
-    <ProjectReference Include="..\..\Src\Application\Management\InteliSystem.App.Management.Usuarios\InteliSystem.App.Management.Usuarios.csproj" /> -->
-  </ItemGroup>
+    <ProjectReference Include="..\..\Src\Infra\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
+    <ProjectReference Include="..\..\Src\Util\InteliSystem.Compartilhados\InteliSystem.Compartilhados.csproj" />
+    <ProjectReference Include="..\..\Src\Util\InteliSystem.Util\InteliSystem.Util.csproj" />
+    <ProjectReference Include="..\..\Src\Dominio\Gestao\InteliSystem.Dominio.Gestao.Endereco\InteliSystem.Dominio.Gestao.Endereco.csproj" />
+    <ProjectReference Include="..\..\Src\Dominio\Gestao\InteliSystem.Dominio.Gestao.Pessoa\InteliSystem.Dominio.Gestao.Pessoa.csproj" />
+    <ProjectReference Include="..\..\Src\Dominio\Gestao\InteliSystem.Dominio.Gestao.Usuarios\InteliSystem.Dominio.Gestao.Usuarios.csproj" />
+    <ProjectReference Include="..\..\Src\Dominio\Gestao\InteliSystem.Dominio.Gestao.Secao\InteliSystem.Dominio.Gestao.Secao.csproj" />
+    <ProjectReference Include="..\..\Src\Dominio\Gestao\InteliSystem.Dominio.Gestao.Logins\InteliSystem.Dominio.Gestao.Logins.csproj" />
+   </ItemGroup>
 
 
 </Project>

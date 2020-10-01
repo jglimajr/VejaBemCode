@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Util\InteliSystem.Compartilhados\InteliSystem.Compartilhados.csproj" />
-    <ProjectReference Include="..\..\..\..\Dominio\Gestao\InteliSystem.Dominio.Gestao.Pessoa\InteliSystem.Dominio.Gestao.Pessoa.csproj" />
+    <ProjectReference Include="..\..\..\..\Dominio\Gestao\InteliSystem.Dominio.Gestao.Pessoas\InteliSystem.Dominio.Gestao.Pessoas.csproj" />
     <ProjectReference Include="..\..\..\..\Util\InteliSystem.Util\InteliSystem.Util.csproj" />
     <ProjectReference Include="..\..\..\InteliSystem.DbConnection\InteliSystem.DbConnection.csproj" />
   </ItemGroup>
